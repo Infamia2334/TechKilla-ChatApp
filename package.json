@@ -1,0 +1,27 @@
+{
+  "name": "techkilla-chatapp",
+  "version": "1.0.0",
+  "description": "A chat application using socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Infamia2334/TechKilla-ChatApp.git"
+  },
+  "author": "Dipan Das",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Infamia2334/TechKilla-ChatApp/issues"
+  },
+  "homepage": "https://github.com/Infamia2334/TechKilla-ChatApp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
