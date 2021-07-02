@@ -21,16 +21,20 @@ app.use(express.static(publicPath))
 io.on("connection", (socket)=> {
     console.log("New WBS connection")
 
-    // socket.emit("countUpdate", count)
+    //Emitting to each client
+    socket.emit("message", "Welcome!")  
 
-    // socket.on("counter", ()=>{
-    //     count++
-    //     io.emit("countUpdate", count)
-    // })
-    socket.emit("message", "Welcome!")
+    //Emitting to all clients except new(current) client
+    socket.broadcast.emit("message", "A new user has joined the chat!")     
+
 
     socket.on("sendMessage", (message)=>{
         io.emit("message", message)
+    })
+
+    //Handling when client tab closes 
+    socket.on("disconnect", ()=>{
+        io.emit("message", "A user has left")
     })
 })
 
