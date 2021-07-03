@@ -22,7 +22,7 @@ io.on("connection", (socket)=> {
     console.log("New WBS connection")
 
     //Emitting to each client
-    socket.emit("message", "Welcome!")  
+    socket.emit("message", "Welcome!, Please Scroll to see new chat messages")  
 
     //Emitting to all clients except new(current) client
     socket.broadcast.emit("message", "A new user has joined the chat!")     
