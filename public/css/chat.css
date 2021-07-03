@@ -1,0 +1,35 @@
+
+*{
+    text-align: center;
+    margin: 20px;
+}
+
+#messages{
+    height: 400px;
+    background-color: aliceblue;
+    overflow: scroll;
+    
+}
+
+#messages::-webkit-scrollbar {
+    
+}
+
+
+#chatbox{
+    position: fixed;
+    bottom: 5%;
+    left: 10%;
+    width: 70%;
+}
+
+#text-box{
+    text-align: left;
+}
+
+#send{
+    position: absolute;
+    left: 100%;
+    bottom: 25%;
+}
+
